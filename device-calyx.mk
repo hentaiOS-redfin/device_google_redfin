@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2021 The Calyx Institute
-# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,8 +22,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     HbmSVManagerOverlay
 
-# PowerShare
-include hardware/google/pixel/powershare/device.mk
+# Rro_overlay
+PRODUCT_PACKAGES += \
+    SettingsResRedfin
+
+# Properties
+TARGET_PRODUCT_PROP += device/google/redfin/product.prop
+TARGET_PRODUCT_PROP += device/google/redfin/vendor.prop
 
 # wireless_charger HAL service
 include device/google/redfin/wireless_charger/wireless_charger.mk
