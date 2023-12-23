@@ -1,6 +1,5 @@
 # Inherit some common stuff.
 $(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
-$(call inherit-product, vendor/gcam/gcam.mk)
 
 # Device specific overlay
 DEVICE_PACKAGE_OVERLAYS += device/google/redfin/overlay-calyx
