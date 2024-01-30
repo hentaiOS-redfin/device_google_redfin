@@ -1,5 +1,5 @@
 # Inherit some common stuff.
-$(call inherit-product, vendor/calyx/config/common_phone.mk)
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 # Device specific overlay
 DEVICE_PACKAGE_OVERLAYS += device/google/redfin/overlay-calyx
@@ -10,7 +10,9 @@ $(call inherit-product, device/google/redbull/device-calyx.mk)
 $(call inherit-product, device/google/redfin/aosp_redfin.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := calyx_redfin
+TARGET_DISABLE_EPPE := true
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+PRODUCT_NAME := aospa_redfin
 PRODUCT_MODEL := Pixel 5
 PRODUCT_BRAND := google
 
